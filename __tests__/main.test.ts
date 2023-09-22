@@ -377,7 +377,7 @@ describe('run', () => {
       owner: 'monalisa',
       repo: 'helloworld',
       name: 'touched-a-pdf-file',
-      color: '#FF0011'
+      color: 'FF0011'
     });
   });
 

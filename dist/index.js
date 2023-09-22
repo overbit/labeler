@@ -316,6 +316,7 @@ function isListEqual(listA, listB) {
     return listA.length === listB.length && listA.every(el => listB.includes(el));
 }
 function setLabels(client, prNumber, labels, labelsColour) {
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         // remove previous labels
         yield client.rest.issues.setLabels({
@@ -331,7 +332,7 @@ function setLabels(client, prNumber, labels, labelsColour) {
                     owner: github.context.repo.owner,
                     repo: github.context.repo.repo,
                     name: label,
-                    color: color !== null && color !== void 0 ? color : '#EDEDED'
+                    color: (_a = color.replace('#', '')) !== null && _a !== void 0 ? _a : 'EDEDED'
                 });
             }
         }

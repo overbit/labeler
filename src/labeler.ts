@@ -385,7 +385,7 @@ async function setLabels(
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
         name: label,
-        color: color ?? '#EDEDED'
+        color: color.replace('#', '') ?? 'EDEDED'
       });
     }
   }
